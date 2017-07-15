@@ -1,0 +1,19 @@
+{
+    "id": "nodebb-widget-bf1stats-vrk",
+    "name": "NodeBB Battlefield 1 Stats VRK",
+    "description": "Battlefield 1 Stats plugin for NodeBB.",
+    "url": "https://github.com/WarbleSync/nodebb-widget-bf1stats-vrk.git",
+    "library": "./library.js",
+    "staticDirs": {
+        "public": "public"
+    },
+    "hooks": [
+      { "hook": "static:app.load", "method": "init" },
+      { "hook": "filter:widget.render:bf1stats-vrk", "method": "renderBF1StatsWidget" },
+      { "hook": "filter:widgets.getWidgets", "method": "defineWidgets" }
+    ],
+    "css": [
+    	"./public/css/style.css"
+    ],
+    "templates": "./public/templates"
+}
